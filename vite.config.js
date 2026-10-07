@@ -8,9 +8,13 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      // Evita CORS en desarrollo: /api -> http://localhost:3000
+      // Evita CORS en desarrollo: /api -> http://localhost:8080
       "/api": {
-        target: "http://localhost:3000",
+        target: "http://localhost:8080",
+        changeOrigin: true,
+      },
+      "/uploads": {
+        target: "http://localhost:8080",
         changeOrigin: true,
       },
     },

@@ -179,7 +179,7 @@ export default function AdminEnrollments() {
 
                         {e.comprobanteUrl && (
                           <a
-                            href={`${import.meta.env.VITE_API_URL || 'http://localhost:3000'}${e.comprobanteUrl}`}
+                            href={`${(import.meta.env.VITE_API_URL || '').replace(/\/api\/?$/, '')}${e.comprobanteUrl}`}
                             target="_blank"
                             rel="noreferrer"
                             className="ml-2 text-xs px-2 py-1 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded transition-colors"

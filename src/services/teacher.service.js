@@ -31,7 +31,7 @@ export const teacherService = {
   },
 
   delete: async (id) => {
-    const res = await api.delete(`/api/teachers/${id}`);
+    const res = await api.del(`/api/teachers/${id}`);
     return res;
   },
 };
